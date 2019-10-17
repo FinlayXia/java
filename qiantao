@@ -1,0 +1,45 @@
+嵌套循环三个例子
+1.九九乘法表
+public class Textqiantao {
+	public static void main(String[] args) {
+		int sum = 1;
+		for(int i=1;i<10;i++) {
+			for(int j=1;j<=i;j++) {
+			sum = i*j;
+			System.out.print(i+"*"+ j +"="+ sum +"\t");
+		}
+		System.out.println();
+		}
+}
+}
+2.计算1到100中奇数及偶数的和
+public class Textqiantao2 {
+	public static void main(String[] args) {
+		int sum01 = 0;//奇数和
+		int sum02 = 0;//偶数和
+	for(int i = 1;i<=100;i++) {
+		if (i%2==0) {
+			System.out.println(sum01+=i);
+		}
+		else{System.out.println(sum02+=i);
+		}
+	}
+ }
+}
+3.测试1到1000之间能被5整除的数，且每行输出5个
+public class Textqiantao03 {
+	public static void main(String[] args) {
+	int m = 0;//定义计数器m
+	for(int i=1 ;i<=1000;i++) {
+		if(i%5==0) {
+		System.out.print(i+" ");
+		m++;
+		}
+		if (m==5) {
+			System.out.println("\t");
+			m=0;
+		}
+	}
+		
+ }
+}
