@@ -1,0 +1,147 @@
+一、定义
+软件本质上是由变量、选择语句、循环语句组成
+是用来控制程序中的各语句的执行顺序的语句
+顺序结构：先执行a，再执行b
+二、if单选择结构
+1.语法结构
+if(布尔表达式){
+	语句块
+}
+if语句对布尔表达式进行一次判定，如判定为真，则执行语言块，否则就跳过
+2.Math类
+提供了一些用于数学计算的方法
+Math.random()该方法用于产生【0，1）的随机数
+
+int i = (int)(6*Math.random());//用于产生【0，5】的随机数
+
+3.雷区
+如果{}不写则只能执行语言块的第一条语句
+任何时候都要写{}
+4.随机骰子运气程序
+public class TextIf {
+	public static void main(String[] args) {
+		int i = (int)(6*Math.random()+1);
+		int j = (int)(6*Math.random()+1);
+		int k = (int)(6*Math.random()+1);
+		int count = i+j+k;
+		if(count>=15) {
+			System.out.println("手气不错");//和大于等于15显示手气不错
+			}
+		if(count>10&&count<15) {
+			System.out.println("手气还行");//大于10小于15的显示手气还行
+			}
+		if(count<=10){
+			System.out.println("手气太差");//小于等于10的显示手气太差
+			}	
+		System.out.println("得了"+count+"分");	
+		}
+		
+}
+三、ifelse双选择结构
+比较面积和周长的大小的代码
+
+public class Textifelse {
+	public static void main(String[] args) {
+	double r = 4*Math.random();//随机产生一个【0，4）区间的半径
+	double area = Math.PI*Math.pow(r,2);//Math.pow()显示为平方，,Math.PI为Π
+	double circle = 2*Math.PI*r;//计算周长
+	System.out.println("半径为："+r);
+	System.out.println("面积为："+area);
+	System.out.println("周长为："+circle);
+	if(area>=circle) {
+		System.out.println("面积大于周长");
+		
+	}else {
+		System.out.println("周长大于面积");
+	}
+	}
+}
+
+四、ifelse多选择结构（适用于条件判断特别多的情况）
+结构：
+if(布尔表达式){
+}else if (布尔表达式){
+}else if(布尔表达式){
+} 
+...
+else {
+}
+
+五、switch多选择结构（多值的判断）
+1. 结构：
+switch (表达式){
+	case 值1：
+	break;
+	case 值2：
+	break;
+	
+	.......
+	
+	default:
+	默认语句；
+}
+2. 注意：
+break是switch语句的结束
+如表达式的值与任一case值不匹配则执行dafult语句
+jdk 1.7 后表达式可以使用字符串
+3. 例子：月份判断
+public class TextSwitch {
+public static void main(String[] args) {
+	int month = (int)(1+12*Math.random());
+	System.out.println("月份："+month);
+	switch (month) {
+	case 1:
+		System.out.println("一月份！");
+	break;
+	case 2:
+		System.out.println("二月份！");
+	break;
+	default:
+		System.out.println("其他月份！");
+	break;
+	}
+ }
+}
+六、while循环语句（先判断在执行）
+1.结构：
+while（布尔表达式）{
+循环体；
+}
+2.计算1到100的和：
+public class TextWhile {
+public static void main(String[] args) {
+	int i = 0;								//暴力计算
+	int sum = 0;
+	while (i<=100) {
+		sum = sum + i;
+		i++;
+	}
+	System.out.println("结果为"+sum);
+}
+}
+七、dowhile循环（先执行再判断）
+结构：
+do{
+	循环体；
+}while（布尔表达式）；
+八、for循环
+1.结构：
+for (初始表达式；布尔表达式；迭代因子){
+	循环体；
+}
+2.计算1到100的和：
+public class TextFor {
+public static void main(String[] args) {
+	int sum = 0;
+	for (int i = 1;i<=100;i++) {
+		sum = sum + i;
+	}
+	System.out.println(sum);
+}
+}
+3.死循环
+for(;;){
+	System.out.println("永远！");
+}
+4.初始化变量的作用域在for循环内部。
+
