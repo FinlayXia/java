@@ -1,0 +1,49 @@
+方法的重载（overload）
+一、重载的方式
+实际上是完全不同的方法，只是名称相同而已
+二、产生的条件
+1、不同的含义：形参的类型，形参的个数，形参的顺序
+2、只有返回值不同不构成重载：
+int a(int a,int b){}与 void a(int a,int b){}
+3、只有形参名字不同，不构成重载
+int a(int a,int b){}与int a(int b,int a){}
+三、例子
+public class TextOverload {
+public static void main(String[] args) {
+	System.out.println(add(1,2));
+	System.out.println(add(1,2,3));
+	System.out.println(add(3.0,1));
+	System.out.println(add(1,3.0));
+	}
+	public static int add (int a ,int b){
+		int sum = a+b;
+		return sum;
+	}
+	//形参的个数构成重载
+	public static int add (int a ,int b,int c){
+		int sum = a+b+c;
+		return sum;
+		}
+	//形参的类型构成重载
+	public static double add (int a,double b) {
+		double sum = a+b;
+		return sum;
+	}
+	//形参的顺序构成重载
+	public static double add (double a,int b) {
+		double sum = a+b;
+		return sum;
+	}
+/*	
+ * //只有返回值不同不构成重载
+	public static double add (int a,int b) {
+		double sum = a+b;
+		return sum;
+	}
+	//只有形参名字不同，不构成重载
+	public static int add (int b,int a) {
+		int sum = a+b;
+		return sum;
+	}
+	*/	
+}
