@@ -1,0 +1,43 @@
+方法
+一、概念
+方法就是一段用来完成特定功能的代码片段，类似于其他语言的函数（给语句加入名称，便于后面调用）
+二、格式
+1.
+[修饰符1 修饰符2]  返回值类型  方法名（形式参数列表）{
+Java语句
+}
+2.调用方式
+对象名.方法名(实参列表)
+3.详细说明
+1）.形式参数：在方法声明时用于接收外界传入的数据
+2）.实参：调用方法时实际传给方法的数据
+3）.返回值：方法在执行完毕后返还给调用它得分环境的数据
+4）.返回值类型：事先约定的返回值的数据类型，如无返回值，必须显示指定位void
+三、实例
+public class Textfangfa {
+ public static void main(String[] args) {
+	//通过对象调用普通方法
+	Textfangfa tf = new Textfangfa();
+	tf.printXia();
+	tf.add(30, 40, 50);
+	int d = tf.add(30, 40, 50)+1000;
+	System.out.println(d);
+	}
+	void printXia() {
+	System.out.println("1");
+	System.out.println("2");
+	System.out.println("3");
+	}
+	int add(int a,int b,int c) {
+	int sum = 	a+b+c;
+	System.out.println(sum);
+	return sum; //return的用处：结束方法的运行，返回值
+	}
+}
+注意：
+方法从属于类和对象
+实参的数据类型，数目和次序必须和所调用的方法声明的一致
+return的用处：结束方法的运行，返回值
+java中值的传递的时数值的copy值
+基本数据类型传递的是数值的copy值
+引用的数据类型传递的才对象的copy值，但指向的时同一个对象
