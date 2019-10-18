@@ -1,4 +1,4 @@
-break语句和continue语句
+一、break语句和continue语句
 1.contiune语句：把100到150之间的不能被3整除的数输出，并且每行输出5个
 public class Textcontinue {
 	public static void main(String[] args) {
@@ -16,3 +16,5 @@ public class Textcontinue {
 	}
 }
 }
+二、带标签的break和continue语句
+1.goto语句
