@@ -1,0 +1,18 @@
+break语句和continue语句
+1.contiune语句：把100到150之间的不能被3整除的数输出，并且每行输出5个
+public class Textcontinue {
+	public static void main(String[] args) {
+	int m = 0;//设置计数器
+	for(int i = 100;i<=150;i++) {
+	if (i%3==0) {
+		continue;
+	}	
+	System.out.print(i+"\t");	
+	m++;
+	if(m==5) {
+		System.out.println();
+		m = 0;
+	}
+	}
+}
+}
