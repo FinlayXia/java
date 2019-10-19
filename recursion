@@ -1,0 +1,26 @@
+递归算法（recursion）
+一、基本思想
+“自己调用自己”
+一个使用递归技术的方法将会直接或者间接的调用自己
+二、内容
+包括两个部分：
+1、递归头：什么时候不调用自身方法，如果没有头将陷入死循环，是递归算法的结束条件
+2、递归体：什么时候调用自身方法
+三、实例
+1、基本用法
+public class TextRecursion01 {
+public static void main(String[] args) {
+	a();
+ }
+static int count = 0;
+static void a() {
+	System.out.println("a");
+	count++;
+	if(count<5) {
+		a();//递归体
+		}else {
+		return;//递归头
+		}
+	}
+}
+2、递归算法n！
