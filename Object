@@ -1,0 +1,54 @@
+对象与类
+一、基本概念
+对象（object）包含不同类型的数据（企业项目制）方便于管理
+instence实例
+类class可以看作对象的模板，即对象的抽象（归纳共同点，抽出像的部分）
+二、类的定义
+包含属性和方法
+1、属性（field,或者成员变量）
+用于定义该类或该类的对象的数据或者静态特征
+2、方法
+用于定义该类或该类实例的行为特征和功能实现
+2、构造方法（调用类）
+三、一个典型类的定义和uml图
+1、学生实例
+public class Student {
+
+	//属性field
+	int id;
+	String name;
+	int age;
+	Computer comp;
+	//方法
+	void study() {
+	System.out.println("学习");	
+	}
+	void play() {
+	System.out.println("玩游戏,玩的电脑是："+comp.brand);	
+	}
+
+	//构造方法
+	Student(){		
+	}
+
+	//程序执行入口，必须存在
+	public static void main(String[] args) {
+		//创建一个学生对象	
+		Student stu = new Student();
+		stu.age = 20;
+		stu.name = "xia";
+		stu.id = 2017;
+		stu.study();
+	
+		//创建一个电脑对象
+		Computer c1 = new Computer();
+		c1.brand = "联想";
+		stu.comp = c1;//给 computer赋值
+		stu.play();
+	}
+}
+
+//新类：电脑的品牌
+class Computer{
+	String brand;
+}
